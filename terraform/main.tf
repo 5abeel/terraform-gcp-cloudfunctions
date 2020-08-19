@@ -4,7 +4,8 @@ provider "google" {
 }
 
 resource "google_storage_bucket" "bucket" {
-  name = "cloud-function-tutorial-bucket-5abeel" # This bucket name must be unique
+  name          = "cloud-function-tutorial-bucket-5abeel" # This bucket name must be unique
+  force_destroy = true
 }
 
 data "archive_file" "src" {
